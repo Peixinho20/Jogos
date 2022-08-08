@@ -1,4 +1,4 @@
-package principal;
+//package principal; //tirar para executar no linux
 
 import telas.TelaPrincipal;
 
