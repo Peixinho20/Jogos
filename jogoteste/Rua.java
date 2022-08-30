@@ -18,19 +18,31 @@ public class Rua extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         
-        setPaintOrder(JanelaFinal.class, carro.class, pedestre.class); //determina a ordem que os objetos serão desehados na tela
+        //determina a ordem que os objetos serão desehados na tela
+        setPaintOrder(JanelaFinal.class, carro.class, pedestre.class);
         
-        criarComponentes(); //declaração do método
+        //declaração do método
+        criarComponentes(); 
     }
     
     public void act()
     {
         if(Greenfoot.getRandomNumber(100)<2){
-            addObject(new carro(), 0, Greenfoot.getRandomNumber(400)); //faz com que carros sejam gerados aleatoriamente na tela
+            //faz com que carros sejam gerados aleatoriamente na tela
+            addObject(new carro(), 0, Greenfoot.getRandomNumber(400)); 
         }
     }
     public void criarComponentes() //chama os objetos dentro dela
     {
-        addObject(new pedestre(), 300, 10); //esse método chama o objet pedestre na posição x = 300 e y = 10
+        //esse método chama o objet pedestre na posição x = 300 e y = 10
+        addObject(new pedestre(), 300, 10); 
+    }
+    
+    public void fimDeJogo()
+    {
+        //instanciou a JanelaFinal e passou a localizaçao da mensagem "Fim de Jogo".
+        addObject(new JanelaFinal("Fim de Jogo!"), getWidth()/2, getHeight()/2);
+        Greenfoot.playSound("FimDeJogo.wav");
+        Greenfoot.stop();
     }
 }

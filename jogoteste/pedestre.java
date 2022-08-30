@@ -8,12 +8,32 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class pedestre extends Actor
 {
-    /**
-     * Act - do whatever the pedestre wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act()
     {
-        // Add your action code here.
+        //movimentos do personagem
+        if(Greenfoot.isKeyDown("left")){
+            move(-1);
+        }
+        
+        if(Greenfoot.isKeyDown("right")){
+            move(1);
+        }
+        
+        if(Greenfoot.isKeyDown("up")){
+            setLocation(getX(), getY() -1);
+        }
+        
+        if(Greenfoot.isKeyDown("down")){
+            setLocation(getX(), getY() +1);
+        }
+        
+        isAtropelado();
+    }
+    
+    //metodo que avisa ao jogo quando o pedestre foi atropelado
+    public void isAtropelado(){
+        if(isTouching(carro.class)){
+            ((Rua) getWorld()).fimDeJogo();
+        }
     }
 }

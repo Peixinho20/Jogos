@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Mundo
+comment1.params=
+comment1.target=Mundo()
+comment1.text=\r\n\ Construtor\ da\ classe\ Mundo\r\n
+comment2.params=
+comment2.target=void\ comecarNovoJogo()
+comment2.text=\r\n\ come\u00E7ar\ novo\ jogo\r\n
+comment3.params=
+comment3.target=void\ carregaCartas()
+comment3.text=\r\n\ Cria\ os\ objetos\ Carta\ e\ os\ adiciona\ na\ tela\r\n
+numComments=4

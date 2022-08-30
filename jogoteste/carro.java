@@ -8,15 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class carro extends Actor
 {
-    /**
-     * Act - do whatever the carro wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act()
-    {
+    public void act(){
         // Add your action code here.
-        setLocation(getX() +1, getY());
-        if(getX() >= 590){
+        setLocation(getX() +1, getY()); //faz o carro andar alterando ele de local
+        if(getX() >= 590){ //se o objeto sair da tela remove o carro para nao se acumularem
             ((Rua) getWorld()).removeObject(this);
         }
     }
