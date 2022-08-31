@@ -2,9 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
 public class Mundo extends World{
-    private static final int QTD_CARTAS = 6;
-    private static final int ESPACO_HORIZONTAL = 100; //espaço entre as cartas
-    private static final int ESPACO_VERTICAL =150;
+    private static final int QTD_CARTAS = 28;
+    private static final int ESPACO_HORIZONTAL = 81;
+    private static final int ESPACO_VERTICAL = 106;
     private Carta [] carta = new Carta[QTD_CARTAS];
     //O objeto lista é usado para conseguir obter uma imagem
     private ListaImagens lista = new ListaImagens();
@@ -40,7 +40,7 @@ public class Mundo extends World{
             
         for(int i = 0; i < QTD_CARTAS; i++){
             carta[i] = new Carta(lista, cerebro);
-            if(qtd <= 3){
+            if(qtd <= 7){
                 qtd++;
                 addObject(carta[i], coluna, linha);
                 coluna += ESPACO_HORIZONTAL;
