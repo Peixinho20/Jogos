@@ -1,0 +1,10 @@
+/*
+ * Primeiro: Baixar o jdk em zip e extrair para qualquer pasta
+ * Segundo: Usar o comando abaixo no cmd sem aspas (não funciona no powershell)
+ *   "set PATH=%PATH%;caminho\da\pasta\jdk-x;caminho\da\pasta\jdk-x\bin"
+ * Terceiro: Verificar se o java está funcionando
+ * Quarto: LARGA! LARGA essa vida de GREENFOOT MISERÁVEL. Pelo amor de Deus pai. Em nome de Jesus amém.
+ * Glória Deus, irmãos?
+ * 
+ * OBS: Se fechar o cmd tem que usar o comando de novo
+*/
