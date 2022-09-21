@@ -43,7 +43,7 @@ public class ListaImagens{
     }
     
     /**
-     * Retorna um String que é um caminho para uma imagem de forma aleatória aleatoria
+     * Retorna um String que é um caminho para uma imagem de forma aleatória
      */
     public GreenfootImage getRandomImage(){
         //Gera um indice aleatorio baseado na quantidade de elementos do ArrayList

@@ -17,23 +17,40 @@ public class Carta  extends Actor{
     private GreenfootImage empty;
     //Status da carta
     private boolean statusDaCarta = true;
+    private boolean reference = false;
     private GreenfootImage bufferImage;
-    private ListaImagens imagem;
+    //private ListaImagens imagem; removido para desacoplamento, agora as imagens (back,empty,carta) da carta são passadas como parâmetro no construtor
     
     /**
      * Construtor da classe Carta
      * 
      */
-    public Carta(ListaImagens imagem, Cerebro c){
-        this.imagem = imagem;
-        //Guarda a imagem que a carta irá representar
-        bufferImage = imagem.getRandomImage();
-        back = imagem.getBack();
-        empty = imagem.getEmpty();
+        
+     public Carta(GreenfootImage carta,GreenfootImage _back,GreenfootImage _empty, Cerebro c){
+        //Guarda a imagem que a carta irá representar e cria um novo objt
+        bufferImage = new GreenfootImage(carta);
+        //cria novos objs para img de costa e vazio
+        back = new GreenfootImage(_back);
+        empty = new GreenfootImage(_empty);
         //Guarda uma referência para o cerebro do jogo
         cerebro = c;
         setImage(back);//Seta a imagem das costas da carta
-    }  
+    } 
+    /**
+     * Retorna a imagem da carta
+    */
+    public GreenfootImage getBufferImage(){
+        return bufferImage;
+    }
+    
+    public void setSizeImagem(int width, int height){
+        bufferImage.scale(width,height);
+        back.scale(width,height);
+        empty.scale(width,height);
+    }
+    public void setReference(){
+        reference =true;
+    }
     
     public boolean getStatusDaCarta(){
         return statusDaCarta;
@@ -42,11 +59,11 @@ public class Carta  extends Actor{
     /**
      * Troca a imagem da carta para jogar novamente
      */
-    public void reiniciarCarta(){
-        bufferImage = imagem.getRandomImage();
+    public void reiniciarCarta(GreenfootImage carta){
+        bufferImage = new GreenfootImage(carta);
         desvirarCarta();
     }
-    
+        
     /**
      * Mostra a imagem da carta
      */
@@ -54,7 +71,7 @@ public class Carta  extends Actor{
         if(statusDaCarta == true){
             statusDaCarta = false;
             setImage(bufferImage);
-            cerebro.VerificaCartaVirada(bufferImage, this);
+            //cerebro.VerificaCartaVirada(bufferImage, this);
         }
     }
     
@@ -65,7 +82,6 @@ public class Carta  extends Actor{
         statusDaCarta = true;
         setImage(back);
     }
-    
     /**
      * Remove a carta após ela ser descoberta
      */
@@ -79,11 +95,19 @@ public class Carta  extends Actor{
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act(){
-        if(Greenfoot.mousePressed(this)){
-           if(cerebro.podeDesvirarCarta()){
-                virarCarta();  
-           }        
-        } 
+        if(reference){
+           if(Greenfoot.mousePressed(this)){
+                desvirarCarta();
+                cerebro.virarCartas();
+            } 
+        }else{
+            if(Greenfoot.mousePressed(this)){
+               /*if(cerebro.podeDesvirarCarta()){
+                    virarCarta();  
+               } */
+               cerebro.VerificaCartaVirada(this);
+            }
+        }
     }
 }    
 
