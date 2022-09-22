@@ -6,7 +6,7 @@ import javax.swing.ImageIcon;
 import javax.swing.border.Border;
 
 
-public class Carta  extends Actor{
+public class Carta extends Actor{
     //AI do jogo
     Cerebro cerebro;
     //Obtém um objeto com informações do mouse
@@ -15,10 +15,13 @@ public class Carta  extends Actor{
     private GreenfootImage back;
     //Imagem Vazia
     private GreenfootImage empty;
+    //Imagem da carta
+    private GreenfootImage bufferImage;
+    private String caminho;
     //Status da carta
     private boolean statusDaCarta = true;
+    private boolean ativada = true;
     private boolean reference = false;
-    private GreenfootImage bufferImage;
     //private ListaImagens imagem; removido para desacoplamento, agora as imagens (back,empty,carta) da carta são passadas como parâmetro no construtor
     
     /**
@@ -26,9 +29,10 @@ public class Carta  extends Actor{
      * 
      */
         
-     public Carta(GreenfootImage carta,GreenfootImage _back,GreenfootImage _empty, Cerebro c){
+     public Carta(String carta,String _back,String _empty, Cerebro c){
         //Guarda a imagem que a carta irá representar e cria um novo objt
-        bufferImage = new GreenfootImage(carta);
+        caminho = carta;
+        bufferImage = new GreenfootImage(caminho);
         //cria novos objs para img de costa e vazio
         back = new GreenfootImage(_back);
         empty = new GreenfootImage(_empty);
@@ -36,18 +40,22 @@ public class Carta  extends Actor{
         cerebro = c;
         setImage(back);//Seta a imagem das costas da carta
     } 
+    
     /**
      * Retorna a imagem da carta
     */
     public GreenfootImage getBufferImage(){
         return bufferImage;
     }
-    
+    public String getCaminho(){
+        return caminho;
+    }
     public void setSizeImagem(int width, int height){
         bufferImage.scale(width,height);
         back.scale(width,height);
         empty.scale(width,height);
     }
+    
     public void setReference(){
         reference =true;
     }
@@ -59,9 +67,12 @@ public class Carta  extends Actor{
     /**
      * Troca a imagem da carta para jogar novamente
      */
-    public void reiniciarCarta(GreenfootImage carta){
-        bufferImage = new GreenfootImage(carta);
+    public void reiniciarCarta(String carta){
         desvirarCarta();
+        caminho = carta;
+        bufferImage = new GreenfootImage(caminho);
+        ativada = true;
+        bufferImage.scale(back.getWidth(),back.getHeight());
     }
         
     /**
@@ -82,11 +93,13 @@ public class Carta  extends Actor{
         statusDaCarta = true;
         setImage(back);
     }
+    
     /**
      * Remove a carta após ela ser descoberta
      */
     public void removerCarta(){
         statusDaCarta = false; 
+        ativada = false;
         setImage(empty);
     }
     
@@ -95,17 +108,21 @@ public class Carta  extends Actor{
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act(){
-        if(reference){
-           if(Greenfoot.mousePressed(this)){
-                desvirarCarta();
-                cerebro.virarCartas();
-            } 
-        }else{
-            if(Greenfoot.mousePressed(this)){
-               /*if(cerebro.podeDesvirarCarta()){
-                    virarCarta();  
-               } */
-               cerebro.VerificaCartaVirada(this);
+        if(Greenfoot.mousePressed(this)){
+            if(reference){
+            /**
+            *adicionar tempo para a carta de referencia e conseguir clicar nas opções de resposta 
+            */
+            desvirarCarta();
+            cerebro.virarCartas();
+            }else{
+                if(cerebro.getReference() == caminho){
+                   if(ativada){
+                     cerebro.cartaDescoberta();
+                     removerCarta();
+                     cerebro.verificaFimDeJogo();   
+                   }
+               }
             }
         }
     }

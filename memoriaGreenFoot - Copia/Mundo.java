@@ -27,17 +27,12 @@ public class Mundo extends World{
      * começar novo jogo
      */
     public void comecarNovoJogo(){
-        lista.carregaIdentificacao();
-        
-        for(int i = 0; i < QTD_CARTAS; i++){
+       for(int i = 0; i < QTD_CARTAS; i++){
             carta[i].reiniciarCarta(lista.getRandomImage());
         }
-       //Caso queira usar mais um de uma carta de referencia, use o codigo abaixo 
-       /*for (int i = 0; i < QTD_CARTASref; i++){
-            cartaRef[i].reiniciarCarta();
-        }*/
-        
-        cartaRef.reiniciarCarta(carta[(int)(Math.random() * QTD_CARTAS)].getBufferImage());
+       cartaRef.reiniciarCarta(carta[(int)(Math.random() * QTD_CARTAS)].getCaminho());//reiniciar carta que de modo aleatório
+       cartaRef.virarCarta();
+       desvirarCartas();
     }
     
     /**
@@ -62,31 +57,45 @@ public class Mundo extends World{
                 coluna += ESPACO_HORIZONTAL;
             }
         }
+        /**
+        * Carta de referencia adicionada ao mundo 
+        */
         coluna = 100; 
         linha = 200;
         //Garantia de que a carta ref vai estar nas opções
-        cartaRef = new Carta(carta[(int)(Math.random() * QTD_CARTAS)].getBufferImage(),lista.getBack(),lista.getEmpty(),cerebro);
-        cartaRef.setSizeImagem(71*2,96*2); //tamanho da imagem da carta de refencia
+        cartaRef = new Carta(carta[(int)(Math.random() * QTD_CARTAS)].getCaminho(),lista.getBack(),lista.getEmpty(),cerebro);
+        //tamanho da imagem da carta de refencia
+        cartaRef.setSizeImagem(71*2,96*2);
         cartaRef.setReference();
         addObject(cartaRef,coluna,linha);
+        
+        /**
+        * Quadro de pontuação adicionado ao mundo
+        */
         qPontos = new Pontuacao(this);
         addObject(qPontos, 400, 70);
+        
+        
         cartaRef.virarCarta();
         desvirarCartas();
     }
+    
     public Carta getReference(){
         return cartaRef;
     }
+    
     public void desvirarCartas(){
         for(int i = 0; i < QTD_CARTAS; i++){
             carta[i].desvirarCarta();
         }
     }
+    
     public void virarCartas(){
         for(int i = 0; i < QTD_CARTAS; i++){
             carta[i].virarCarta();
         }
     }
+    
     public void setPontuacao(int pontuacao){
         qPontos.setPontuacao(pontuacao);
     }
