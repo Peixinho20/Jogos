@@ -19,14 +19,14 @@ public class ListaImagens{
      * Construtor da classe ListaImagens
      */
     public ListaImagens(){
-        carregaIdentificacao();
+        guardaIdentificacao();
         carregaImagens();
     }
 
     /**
      * Carrega identificação das cartas 
      */
-    public void carregaIdentificacao(){
+    public void guardaIdentificacao(){
         for(int i = 0; i < 14; i++){
             numerosRestantes.add(i);
             numerosRestantes.add(i);

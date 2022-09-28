@@ -6,4 +6,5 @@ comment2.params=pontuacao
 comment2.target=void\ setPontuacao(int)
 comment3.params=
 comment3.target=void\ act()
+comment3.text=\n\ Troca\ a\ imagem\ da\ carta\ para\ jogar\ novamente\n\ \ \ \ \ \n\ \ \ \ public\ void\ reiniciarPontuacao(){\n\ \ \ \ \ \ \ \ //bufferImage\ \=\ imagem.getRandomImage();\n\ \ \ \ \ \ \ \ pontuacaoTotal\ \=\ 0;\n}
 numComments=4

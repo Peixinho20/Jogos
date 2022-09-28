@@ -12,31 +12,30 @@ public class Carta  extends Actor{
     //Obtém um objeto com informações do mouse
     MouseInfo mouse = Greenfoot.getMouseInfo();
     //Imagem nas costas da carta
-    private GreenfootImage back;
+    private GreenfootImage costas;
     //Imagem Vazia
-    private GreenfootImage empty;
-    //Status da carta
-    private boolean statusDaCarta = true;
+    private GreenfootImage vazio;
+    //situacao da carta
+    private boolean situacaoDaCarta = true;
     private GreenfootImage bufferImage;
     private ListaImagens imagem;
     
     /**
      * Construtor da classe Carta
-     * 
      */
     public Carta(ListaImagens imagem, Cerebro c){
         this.imagem = imagem;
         //Guarda a imagem que a carta irá representar
         bufferImage = imagem.getRandomImage();
-        back = imagem.getBack();
-        empty = imagem.getEmpty();
+        costas = imagem.getBack();
+        vazio = imagem.getEmpty();
         //Guarda uma referência para o cerebro do jogo
         cerebro = c;
-        setImage(back);//Seta a imagem das costas da carta
+        setImage(costas);//Seta a imagem das costas da carta
     }
     
-    public boolean getStatusDaCarta(){
-        return statusDaCarta;
+    public boolean getsituacaoDaCarta(){
+        return situacaoDaCarta;
     }
     
     /**
@@ -51,8 +50,8 @@ public class Carta  extends Actor{
      * Mostra a imagem da carta
      */
     public void virarCarta(){
-        if(statusDaCarta == true){
-            statusDaCarta = false;
+        if(situacaoDaCarta == true){
+            situacaoDaCarta = false;
             setImage(bufferImage);
             cerebro.VerificaCartaVirada(bufferImage, this);
         }
@@ -62,16 +61,16 @@ public class Carta  extends Actor{
      * Desvira a carta mostrando as costas da carta
      */
     public void desvirarCarta(){
-        statusDaCarta = true;
-        setImage(back);
+        situacaoDaCarta = true;
+        setImage(costas);
     }
     
     /**
      * Remove a carta após ela ser descoberta
      */
     public void removerCarta(){
-        statusDaCarta = false; 
-        setImage(empty);
+        situacaoDaCarta = false; 
+        setImage(vazio);
     }
     
     /**

@@ -27,8 +27,10 @@ public class Cerebro{
                 
                 qtdCartasViradas = 0;
                 pontuacao++;
+                //refMundo.setPontuacao(pontuacao);
                 if(nomeDaCartaVirada1 == nomeDaCartaVirada2){
-                    qtdCartasDescobertas++;
+                    qtdCartasDescobertas++; 
+                    refMundo.setPontuacao(pontuacao);
                     Greenfoot.delay(10);
                     carta1.removerCarta();
                     carta2.removerCarta();
@@ -52,9 +54,6 @@ public class Cerebro{
     public void verificaFimDeJogo(){
         if(qtdCartasDescobertas == QTD_PARES){
             qtdCartasDescobertas = 0;
-            qPontos.setPontuacao(pontuacao);
-            refMundo.addObject(qPontos, 287, 220);
-            pontuacao = 0; 
         }
     }
     

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ListaImagens
+comment1.params=
+comment1.target=ListaImagens()
+comment1.text=\n\ Construtor\ da\ classe\ ListaImagens\n
+comment2.params=
+comment2.target=java.lang.String\ getRandomImage()
+comment2.text=\n\ Retorna\ um\ String\ que\ \u00E9\ um\ caminho\ para\ uma\ imagem\ de\ forma\ aleat\u00F3ria\n
+comment3.params=
+comment3.target=java.lang.String\ getBack()
+comment3.text=\n\ Retorna\ as\ costas\ da\ imagem\n
+comment4.params=
+comment4.target=java.lang.String\ getEmpty()
+comment4.text=\n\ Retorna\ a\ imagem\ vazia\n
+numComments=5

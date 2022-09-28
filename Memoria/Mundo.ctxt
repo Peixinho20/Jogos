@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Mundo
+comment1.params=
+comment1.target=Mundo()
+comment1.text=\n\ Construtor\ da\ classe\ Mundo\n
+comment2.params=
+comment2.target=void\ comecarNovoJogo()
+comment2.text=\n\ come\u00E7ar\ novo\ jogo\n
+comment3.params=
+comment3.target=void\ carregaCartas()
+comment3.text=\n\ Cria\ os\ objetos\ Carta\ e\ os\ adiciona\ na\ tela\n
+comment4.params=
+comment4.target=Carta\ getReference()
+comment5.params=
+comment5.target=void\ desvirarCartas()
+comment6.params=
+comment6.target=void\ virarCartas()
+comment7.params=pontuacao
+comment7.target=void\ setPontuacao(int)
+numComments=8
