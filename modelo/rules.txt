@@ -1,0 +1,24 @@
+Jogo:
+//considere o jogo da memória com uma imagem de referência e 4 opções de resposta com apenas uma correta.
+ponto = 0
+	Fase 1:
+		1º cenário: 
+			Se houver acerto, ponto = ponto + 1, então próximo cenário.
+			Senão repete cenário com todas as opções.
+				Se houver acerto, então segundo cenário.
+				Senão se repete cenário com (n-1) opções.
+					Se houver acerto, então segundo cenário.
+					Senão repete cenário com (n-2) opções.
+		2º cenário:
+			Se houver acerto, ponto = ponto + 1, então próximo cenário.
+			Senão repete cenário com todas as opções.
+				Se houver acerto, então terceiro cenário.
+				Senão repete cenário com (n-1) opções.
+					Se houver acerto, então terceiro cenário.
+					Senão repete cenário com (n-2) opções.
+
+			
+		//repetição desse esquema até o quarto cenário
+
+
+		

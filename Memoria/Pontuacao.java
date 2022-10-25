@@ -25,8 +25,8 @@ public class Pontuacao extends Actor{
         imagem.drawString(pontuacaoTotal + " Pontos", 100, 84); //
         imagem.setFont(new Font("Comic Sans MS", true,false,14));
         imagem.drawString("Clique para jogar de novo", 100, 130);
-        fimDeRodada = true;
         
+        fimDeRodada = true;
     }
     
     public void act(){
