@@ -1,7 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-
-
 public class Pontuacao extends Actor{
     private Mundo w;
     GreenfootImage imagem;
@@ -28,7 +26,6 @@ public class Pontuacao extends Actor{
         imagem.setFont(new Font("Comic Sans MS", true,false /*Font.PLAIN*/, 14));
         imagem.drawString("< Clique para jogar de novo (Click to Play Again) >", 10, 130);
         fimDeRodada = true;
-        
     }
     
     public void act(){

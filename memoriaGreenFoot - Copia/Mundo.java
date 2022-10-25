@@ -75,7 +75,6 @@ public class Mundo extends World{
         qPontos = new Pontuacao(this);
         addObject(qPontos, 400, 70);
         
-        
         cartaRef.virarCarta();
         desvirarCartas();
     }

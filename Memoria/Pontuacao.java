@@ -12,8 +12,8 @@ public class Pontuacao extends Actor{
         imagem = new GreenfootImage("images/quadro.png");
         imagem.clear();
         imagem.setColor(Color.WHITE);
-        imagem.setFont(new Font("Comic Sans MS",true,false /*Font.BOLD*/, 24));
-        imagem.drawString(pontuacaoTotal + " Pontos", 100, 84);
+        imagem.setFont(new Font("Comic Sans MS",true,false /*Font.BOLD*/, 34));
+        imagem.drawString(pontuacaoTotal + " Pontos", 9, 70);
         setImage(imagem);
     }
     
@@ -21,11 +21,11 @@ public class Pontuacao extends Actor{
         pontuacaoTotal += pontuacao;
         imagem.clear();
         imagem.setColor(Color.WHITE);
-        imagem.setFont(new Font("Comic Sans MS",true,false /*Font.BOLD*/, 24));
-        imagem.drawString(pontuacaoTotal + " Pontos", 100, 84); //
-        imagem.setFont(new Font("Comic Sans MS", true,false,14));
-        imagem.drawString("Clique para jogar de novo", 100, 130);
-        
+        //caso os texto voltem a desaparecer, mexa nas suas posições x e y 
+        imagem.setFont(new Font("Comic Sans MS",true,false /*Font.BOLD*/, 34));
+        imagem.drawString(pontuacaoTotal + " Pontos", 10, 70);
+        imagem.setFont(new Font("Comic Sans MS", true,false /*Font.PLAIN*/, 14));
+        imagem.drawString("< Clique aqui para continuar >", 9, 100);
         fimDeRodada = true;
     }
     
