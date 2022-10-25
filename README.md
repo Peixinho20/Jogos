@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-# Jogo
-=======
-
->>>>>>> c622c5476853c935a159785ca562e710b7bc527a
+Desenvolvimento de Jogos usando greenfoot
