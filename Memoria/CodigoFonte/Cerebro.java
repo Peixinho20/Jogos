@@ -16,9 +16,11 @@ public class Cerebro{
        // compara a imagem clicada com a imagem de referência
        return refMundo.getReference().getCaminho();
     }
+    
     public void cartaDescoberta(){
         qtdCartasDescobertas++;
     }
+    
     /**
      * Verifica o fim do jogo
      */
@@ -39,12 +41,14 @@ public class Cerebro{
             return false;
         }
     }
+    
     /**
      * 
     */
     public void desvirarCartas(){
         refMundo.desvirarCartas();
     }
+    
     /**
      * 
     */

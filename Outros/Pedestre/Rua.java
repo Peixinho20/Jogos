@@ -32,6 +32,7 @@ public class Rua extends World
             addObject(new carro(), 0, Greenfoot.getRandomNumber(400)); 
         }
     }
+    
     public void criarComponentes() //chama os objetos dentro dela
     {
         //esse método chama o objet pedestre na posição x = 300 e y = 10

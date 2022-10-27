@@ -47,9 +47,11 @@ public class Carta extends Actor{
     public GreenfootImage getBufferImage(){
         return bufferImage;
     }
+    
     public String getCaminho(){
         return caminho;
     }
+    
     public void setSizeImagem(int width, int height){
         bufferImage.scale(width,height);
         back.scale(width,height);
@@ -57,7 +59,7 @@ public class Carta extends Actor{
     }
     
     public void setReference(){
-        reference =true;  
+        reference =true;          
     }
     
     public boolean getStatusDaCarta(){
@@ -65,7 +67,7 @@ public class Carta extends Actor{
     }
     
     /**
-     * Troca a imagem da carta para jogar novamente
+     * Troca a imagem das cartas para jogar novamente
      */
     public void reiniciarCarta(String carta){
         desvirarCarta();
@@ -114,6 +116,7 @@ public class Carta extends Actor{
             /**
             *adicionar tempo para a carta de referencia e conseguir clicar nas opções de resposta 
             */
+            Greenfoot.delay(10);
             desvirarCarta();
             cerebro.virarCartas();
             }else{               

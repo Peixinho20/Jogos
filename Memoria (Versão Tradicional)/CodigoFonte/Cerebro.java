@@ -26,10 +26,11 @@ public class Cerebro{
                 carta2 = c;
                 
                 qtdCartasViradas = 0;
-                pontuacao++;
+                //pontuacao++;
                 //refMundo.setPontuacao(pontuacao);
                 if(nomeDaCartaVirada1 == nomeDaCartaVirada2){
                     qtdCartasDescobertas++; 
+                    pontuacao++;
                     refMundo.setPontuacao(pontuacao);
                     Greenfoot.delay(10);
                     carta1.removerCarta();

@@ -26,7 +26,7 @@ public class Mundo extends World{
      */
     public void comecarNovoJogo(){
         lista.guardaIdentificacao();
-        for(int i = 0; i < TotalCartas; i++){
+        for(int i = 0; i <= TotalCartas; i++){
             carta[i].reiniciarCarta();
         }
     }
