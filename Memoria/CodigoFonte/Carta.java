@@ -116,7 +116,7 @@ public class Carta extends Actor{
             /**
             *adicionar tempo para a carta de referencia e conseguir clicar nas opções de resposta 
             */
-            Greenfoot.delay(10);
+            //Greenfoot.delay(10); //implementar depois
             desvirarCarta();
             cerebro.virarCartas();
             }else{               

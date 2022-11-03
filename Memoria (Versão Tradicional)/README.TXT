@@ -1,4 +1,4 @@
-PROJECT TITLE: Jogo da memória
+PROJECT TITLE: Jogo da memória (TRADICIONAL)
 PURPOSE OF PROJECT: Estímulação congnitva e motora
 VERSION or DATE: 03/11/2022
 HOW TO START THIS PROJECT: Caso esteja no windowns e com a versão do java acima da décima
