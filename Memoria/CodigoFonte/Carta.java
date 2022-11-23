@@ -9,6 +9,8 @@ import javax.swing.border.Border;
 public class Carta extends Actor{
     //AI do jogo
     Cerebro cerebro;
+    
+     
     //Obtém um objeto com informações do mouse
     MouseInfo mouse = Greenfoot.getMouseInfo();
     //Imagem nas costas da carta
@@ -23,6 +25,7 @@ public class Carta extends Actor{
     private boolean ativada = true;
     private boolean reference = false;
     //private ListaImagens imagem; removido para desacoplamento, agora as imagens (back,empty,carta) da carta são passadas como parâmetro no construtor
+    private int timer = 20; //about 5 sec at normal speed
     
     /**
      * Construtor da classe Carta
@@ -75,6 +78,7 @@ public class Carta extends Actor{
         bufferImage = new GreenfootImage(caminho);
         ativada = true;
         bufferImage.scale(back.getWidth(),back.getHeight());
+        timer=20;
     }
         
     /**
@@ -84,7 +88,6 @@ public class Carta extends Actor{
         if(statusDaCarta == true){
             statusDaCarta = false;
             setImage(bufferImage);
-            //cerebro.VerificaCartaVirada(bufferImage, this);
         }
     }
     
@@ -111,22 +114,19 @@ public class Carta extends Actor{
      */
     
     public void act(){
-        if(Greenfoot.mousePressed(this)){
-            if(reference){
-            /**
-            *adicionar tempo para a carta de referencia e conseguir clicar nas opções de resposta 
-            */
-            //Greenfoot.delay(10); //implementar depois
+        if (--timer == 0){
+            reference =false;
             desvirarCarta();
             cerebro.virarCartas();
-            }else{               
-               if(cerebro.getReference() == caminho){
-                  if(ativada){
-                     cerebro.cartaDescoberta();
-                     removerCarta();
-                     cerebro.verificaFimDeJogo();   
-                  }
-               }
+        }
+        
+        if(Greenfoot.mousePressed(this)){
+            if(cerebro.getReference() == caminho){
+                if(ativada){
+                    cerebro.cartaDescoberta();
+                    removerCarta();
+                    cerebro.verificaFimDeJogo();
+                }
             }
         }
     }

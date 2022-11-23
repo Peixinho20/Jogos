@@ -14,9 +14,6 @@ public class Mundo extends World{
     //Objeto Carta de referência
     private Pontuacao qPontos;
     
-    private int delay;
-    private static final int max_delay = 20;
-    
     /**
      * Construtor da classe Mundo
      */
@@ -36,15 +33,6 @@ public class Mundo extends World{
         }
        //reiniciar carta que de modo aleatório
        cartaRef.reiniciarCarta(carta[(int)(Math.random() * QTD_CARTAS)].getCaminho());
-       /**
-        * Teste de delay: ainda não vira a carta sozinho
-        * links úteis: https://www.greenfoot.org/files/javadoc/
-        *              https://www.greenfoot.org/topics/1149
-        * 
-       if (delay == max_delay){
-            //statusDaCarta = true;
-            cartaRef.virarCarta();
-       }*/
        cartaRef.virarCarta();
        desvirarCartas();
     }

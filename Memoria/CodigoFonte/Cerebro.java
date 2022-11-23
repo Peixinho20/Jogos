@@ -54,6 +54,5 @@ public class Cerebro{
     */
     public void virarCartas(){
         refMundo.virarCartas();
-        //Greenfoot.delay(10);
     }
 }
