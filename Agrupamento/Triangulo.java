@@ -56,13 +56,11 @@ public class Triangulo extends Figuras
         int[] yPoints = {0, 50, 50};
         image.fillPolygon(xPoints, yPoints, 3);
         setImage(image);
-        //getCor(Color.GREEN);
         
         String corString = cor.toString();
     } 
     
     public void atuar() {
         String corString = getCorString();
-        // Restante do código
     }
 }

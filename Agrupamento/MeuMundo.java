@@ -12,10 +12,9 @@ import java.util.Random;
 
 public class MeuMundo extends World
 {
-    int pontuacao; 
-    int totalFiguras;
+    private int pontuacao = 0; 
     private List<Color> cores;
-    public int figurasClassificadas;
+    private Caixa caixa;
     /**
      * Constructor for objects of class MeuMundo.
      * 
@@ -30,20 +29,18 @@ public class MeuMundo extends World
         cores.add(Color.BLUE);
         cores.add(Color.GREEN);
                        
-        //Instanciando Caixa ao MeuMeundo
+        //Instanciando uma Caixa ao MeuMeundo
         Caixa caixa1 = new Caixa();
-        addObject(caixa1, 200, 100);
+        addObject(caixa1, 130, 350);
+        caixa = caixa1;
         
-        gerarFiguras();
-        
-        atualizarPontuacao();
+        //figurasClassificadas = 0
+        gerarFiguras();        
     }
     
     public void gerarFiguras() {
-        totalFiguras = 10;
-        for (int i = 0; i < totalFiguras; i++) {
-            int tipoAleatorio = Greenfoot.getRandomNumber(6); // Número aleatório entre 0 e n-1
-        
+        for (int i = 0; i < 15; i++) {
+            int tipoAleatorio = Greenfoot.getRandomNumber(3); // Número aleatório entre 0 e n-1
             Figuras figura;
         
             switch (tipoAleatorio) {
@@ -60,11 +57,15 @@ public class MeuMundo extends World
                     figura = criarCirculoAleatorio(); // Valor padrão caso ocorra algum erro
                     break;
             }
-            int x = Greenfoot.getRandomNumber(getWidth() - figura.getImage().getWidth());
-            int y = Greenfoot.getRandomNumber(getHeight()- figura.getImage().getHeight());
+            int larguraTela = getWidth() - 100;
+            int alturaTela = getHeight() - 100;
+
+            int x = larguraTela - Greenfoot.getRandomNumber(larguraTela/2);
+            int y = Greenfoot.getRandomNumber(alturaTela);
             addObject(figura, x, y);
         }
     }
+    
     private Circulo criarCirculoAleatorio() {
         Random random = new Random();
         int indiceCor = random.nextInt(cores.size());
@@ -85,26 +86,18 @@ public class MeuMundo extends World
         Color cor = cores.get(indiceCor);
         return new Cubo(cor);
     }
-    
-    public void classificarFigura(String cor){
-        pontuacao++;
+      
+    public void Pontuacao(){
+        pontuacao += 2;
         atualizarPontuacao();
-        figurasClassificadas++;
-        
-        for (Figuras figura : getObjects(Figuras.class)) {
-            String corFigura = figura.getCorString();
-            if (corFigura.equals(cor)) {
-                // Lógica para agrupar a figura de acordo com a cor da caixa
-                pontuacao += pontuacao;
-            }
-        }
-        
-        if (figurasClassificadas == totalFiguras) {
-            Greenfoot.stop(); //todos os cubos foram classificados
-        }        
-    } 
+    }
     
-    private void atualizarPontuacao(){
+    public void reduzPontuacao(){
+        pontuacao -= 1;
+        atualizarPontuacao();
+    }
+    
+    public void atualizarPontuacao(){
         showText("Pontuacao: " + pontuacao, 120,50);
     }
 }

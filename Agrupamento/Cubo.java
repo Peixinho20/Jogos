@@ -51,13 +51,11 @@ public class Cubo extends Figuras{
         image.setColor(cor);
         image.fillRect(10, 10, 30, 30);
         setImage(image);
-        //getCor(Color.GREEN);
         
         String corString = cor.toString();
     }
     
     public void atuar() {
         String corString = getCorString();
-        // Restante do código
     }
 }

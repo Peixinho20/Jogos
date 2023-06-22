@@ -37,16 +37,7 @@ public class Figuras extends Actor
         this.corString = corString;
         atualizarImagem();
     }
-    
-    /**
-     * Act - do whatever the Figuras wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act()
-    {
-        // Add your action code here.
-    }
-    
+        
     private void atualizarImagem() {
         GreenfootImage imagem = new GreenfootImage(50, 50);
         imagem.setColor(cor);

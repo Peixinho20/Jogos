@@ -52,13 +52,11 @@ public class Circulo extends Figuras
         image.setColor(cor);
         image.fillOval(0, 0, 50, 50);
         setImage(image);
-        //getCor(Color.GREEN);
-        
+                
         String corString = cor.toString();
     }
     
     public void atuar() {
         String corString = getCorString();
-        // Restante do código
     }
 }
