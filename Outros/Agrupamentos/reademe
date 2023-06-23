@@ -1,1 +1,13 @@
+Agrupamentos
 
+O jogo  consiste em agrupar figuras de acordo com a cor da caixa que se encontra no cenário. 
+Para fazer isso usuário clicar em uma figura e arrastá-la até a caixa com a sua cor correspondente.
+Se o usuário conseguir agrupar corretamente, a pontuação dele aumenta, se não diminui.
+
+O jogo, atualmente, é  composto por duas fases e para passar de fase o usuário deve marcar uma 
+determinada quantidade de pontos. Ao todo são geradas quinze figuras geométricas e caixas que alternam entre 
+as cores azul, verde, amarelo e vermelho, ambos gerados aleatóriamente pelo programa.
+
+A primeira fase é composta por uma caixa e algumas figuras (como trangulos,
+circulos e quadrado). Já na segunda fase há duas caixas de cores distintas para que o usuáio faça
+a associação entre figuras e caixas.
