@@ -1,26 +1,32 @@
 import greenfoot.*;
+import java.util.List;
 
 public class Caixa extends Actor{
     private Color cor; 
-    private MeuMundo meuMundo;
+    public Fase1 fase1;
         
-    //Criaçao e definiçao da caixa    
+    //Criaçao e definiçao da caixa  
+    /**
     public Caixa(){
         GreenfootImage vermelha = new GreenfootImage("images/red.png");
         setImage(vermelha);
-        int largura1 = 250;
-        int altura1 = 100;
+        int largura1 = 150;
+        int altura1 = 50;
         
         GreenfootImage imagemRedimensionada = new GreenfootImage(vermelha);
         imagemRedimensionada.scale(largura1,altura1);
         setImage(imagemRedimensionada);  
     }
+    **/
     
     /**
      * Adicionar a verificaçao e contabilidade dos objetos que 
      * foram adicionados na caixa
      */
     public void act(){
+        verificarObjetos();
+        
+        /**
         Actor objeto = getOneIntersectingObject(Figuras.class);
         if (objeto != null && objeto instanceof Figuras) {
             Figuras figura = (Figuras) objeto;
@@ -38,6 +44,18 @@ public class Caixa extends Actor{
                 mundo.atualizarPontuacao();
             }
             
+            String corFigura = figura.getCorString();
+        }
+        **/
+    }
+    
+    public void verificarObjetos(){
+        List<Figuras> objetos = getIntersectingObjects(Figuras.class);
+        for (Figuras figura : objetos) {
+            getWorld().removeObject(figura);
+            fase1.reduzPontuacao();
+            fase1.atualizarPontuacao();
+
             String corFigura = figura.getCorString();
         }
     }

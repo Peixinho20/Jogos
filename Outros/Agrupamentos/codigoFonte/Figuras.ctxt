@@ -1,18 +1,25 @@
 #BlueJ class context
 comment0.target=Figuras
-comment0.text=\n\ Write\ a\ description\ of\ class\ Figuras\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Figuras\ here.\n\ Essa\ classe\ serve\ como\ uma\ base\ gen\u00E9rica\ para\ a\ cria\u00E7\u00E3o\ de\ \n\ diferentes\ tipos\ de\ figuras\ no\ mundo\ do\ Greenfoot.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=cor
 comment1.target=Figuras(greenfoot.Color)
+comment1.text=\n\ Construtor\ que\ recebe\ um\ objeto\ Color\ como\ par\u00E2metro\ e\n\ define\ a\ cor\ da\ figura.\n
 comment2.params=corString
 comment2.target=Figuras(java.lang.String)
+comment2.text=\n\ Construtor\ que\ recebe\ uma\ String\ representando\ a\ cor\ \n\ da\ figura\ e\ armazena\ na\ vari\u00E1vel\ corString.\n
 comment3.params=
 comment3.target=java.lang.String\ getCorString()
+comment3.text=\n\ retorna\ a\ cor\ da\ figura\ como\ uma\ String.\n
 comment4.params=
 comment4.target=greenfoot.Color\ getCor()
+comment4.text=\n\ retorna\ a\ cor\ da\ figura\ como\ um\ objeto\ Color.\n
 comment5.params=cor
 comment5.target=void\ setCor(greenfoot.Color)
+comment5.text=\n\ atualiza\ a\ cor\ da\ figura\ com\ um\ novo\ objeto\ Color\ e\ chama\ o\ \n\ m\u00E9todo\ atualizarImagem()\ para\ atualizar\ a\ imagem\ da\ figura.\n
 comment6.params=corString
 comment6.target=void\ setCorString(java.lang.String)
+comment6.text=\n\ atualiza\ a\ cor\ da\ figura\ com\ uma\ nova\ String\ e\ chama\ o\ m\u00E9todo\ \n\ atualizarImagem()\ para\ atualizar\ a\ imagem\ da\ figura.\n
 comment7.params=
 comment7.target=void\ atualizarImagem()
+comment7.text=\n\ atualiza\ a\ imagem\ da\ figura\ com\ base\ na\ cor\ definida.\ Neste\ \n\ c\u00F3digo\ de\ exemplo,\ o\ m\u00E9todo\ apenas\ define\ a\ cor\ de\ fundo\ da\ \n\ imagem\ com\ a\ cor\ especificada.\n
 numComments=8

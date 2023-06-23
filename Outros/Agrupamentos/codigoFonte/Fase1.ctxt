@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Fase1
+comment0.text=\n\ Ele\ gera\ figuras\ de\ cores\ aleat\u00F3rias\ e\ os\ adiciona\ ao\ mundo\ \n\ usando\ coordenadas\ x\ e\ y\ aleat\u00F3rias.\n\ \n
+comment1.params=
+comment1.target=Fase1()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Fase1.\n\ \n
+comment2.params=
+comment2.target=void\ gerarFiguras()
+comment3.params=
+comment3.target=Circulo\ criarCirculoAleatorio()
+comment4.params=
+comment4.target=Triangulo\ criarTrianguloAleatorio()
+comment5.params=
+comment5.target=Cubo\ criarCuboAleatorio()
+comment6.params=
+comment6.target=void\ Pontuacao()
+comment7.params=
+comment7.target=void\ reduzPontuacao()
+comment8.params=
+comment8.target=void\ atualizarPontuacao()
+numComments=9
