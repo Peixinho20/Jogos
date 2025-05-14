@@ -33,7 +33,9 @@ Preparação:
 Sequencia de jogo:
 
 Turnos (de cada jogador):
+
 Jogo:
+
     -Jogadores
         -Turnos:
             -Embaralhar e distribuir
