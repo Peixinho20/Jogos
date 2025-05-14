@@ -1,0 +1,35 @@
+/home/camilinha/Público/Git/Jogos/C#/bin/Debug/net8.0/C#
+/home/camilinha/Público/Git/Jogos/C#/bin/Debug/net8.0/C#.deps.json
+/home/camilinha/Público/Git/Jogos/C#/bin/Debug/net8.0/C#.runtimeconfig.json
+/home/camilinha/Público/Git/Jogos/C#/bin/Debug/net8.0/C#.dll
+/home/camilinha/Público/Git/Jogos/C#/bin/Debug/net8.0/C#.pdb
+/home/camilinha/Público/Git/Jogos/C#/obj/Debug/net8.0/C#.GeneratedMSBuildEditorConfig.editorconfig
+/home/camilinha/Público/Git/Jogos/C#/obj/Debug/net8.0/C#.AssemblyInfoInputs.cache
+/home/camilinha/Público/Git/Jogos/C#/obj/Debug/net8.0/C#.AssemblyInfo.cs
+/home/camilinha/Público/Git/Jogos/C#/obj/Debug/net8.0/C#.csproj.CoreCompileInputs.cache
+/home/camilinha/Público/Git/Jogos/C#/obj/Debug/net8.0/C#.dll
+/home/camilinha/Público/Git/Jogos/C#/obj/Debug/net8.0/refint/C#.dll
+/home/camilinha/Público/Git/Jogos/C#/obj/Debug/net8.0/C#.pdb
+/home/camilinha/Público/Git/Jogos/C#/obj/Debug/net8.0/C#.genruntimeconfig.cache
+/home/camilinha/Público/Git/Jogos/C#/obj/Debug/net8.0/ref/C#.dll
+/home/camilinha/Público/Git/Jogos/FlipCity/obj/Debug/net8.0/C#.GeneratedMSBuildEditorConfig.editorconfig
+/home/camilinha/Público/Git/Jogos/FlipCity/obj/Debug/net8.0/C#.AssemblyInfoInputs.cache
+/home/camilinha/Público/Git/Jogos/FlipCity/obj/Debug/net8.0/C#.AssemblyInfo.cs
+/home/camilinha/Público/Git/Jogos/FlipCity/obj/Debug/net8.0/C#.csproj.CoreCompileInputs.cache
+/home/camilinha/Público/Git/Jogos/FlipCity/obj/Debug/net8.0/C#.dll
+/home/camilinha/Público/Git/Jogos/FlipCity/obj/Debug/net8.0/refint/C#.dll
+/home/camilinha/Público/Git/Jogos/FlipCity/obj/Debug/net8.0/C#.pdb
+/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/bin/Debug/net8.0/C#
+/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/bin/Debug/net8.0/C#.deps.json
+/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/bin/Debug/net8.0/C#.runtimeconfig.json
+/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/bin/Debug/net8.0/C#.dll
+/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/bin/Debug/net8.0/C#.pdb
+/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/obj/Debug/net8.0/C#.GeneratedMSBuildEditorConfig.editorconfig
+/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/obj/Debug/net8.0/C#.AssemblyInfoInputs.cache
+/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/obj/Debug/net8.0/C#.AssemblyInfo.cs
+/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/obj/Debug/net8.0/C#.csproj.CoreCompileInputs.cache
+/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/obj/Debug/net8.0/C#.dll
+/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/obj/Debug/net8.0/refint/C#.dll
+/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/obj/Debug/net8.0/C#.pdb
+/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/obj/Debug/net8.0/C#.genruntimeconfig.cache
+/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/obj/Debug/net8.0/ref/C#.dll
