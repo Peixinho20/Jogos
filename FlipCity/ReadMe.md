@@ -10,6 +10,7 @@ Componentes:
     Escritório - Centro Empresarial
 
 Preparação:
+
     1. Forme os baralhos
         Cada jogador recebe as seguintes cartas:
             4x Área residencial
