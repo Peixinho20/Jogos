@@ -1,6 +1,7 @@
 Jogo Flip City  
 
-Permite de 1 a 4 jogaores
+Permite de 1 a 4 jogaores.
+
 Componentes:
     Area Residencial - Aparteamento
     Loja de Conveniencia - Shopping Center
