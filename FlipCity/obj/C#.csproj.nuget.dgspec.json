@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/C#.csproj": {}
+    "/home/camilinha/Público/Git/Jogos/FlipCity/v2/C#.csproj": {}
   },
   "projects": {
-    "/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/C#.csproj": {
+    "/home/camilinha/Público/Git/Jogos/FlipCity/v2/C#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/C#.csproj",
+        "projectUniqueName": "/home/camilinha/Público/Git/Jogos/FlipCity/v2/C#.csproj",
         "projectName": "C#",
-        "projectPath": "/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/C#.csproj",
+        "projectPath": "/home/camilinha/Público/Git/Jogos/FlipCity/v2/C#.csproj",
         "packagesPath": "/home/camilinha/.nuget/packages/",
-        "outputPath": "/home/camilinha/Público/Git/Jogos/FlipCity (Cópia)/obj/",
+        "outputPath": "/home/camilinha/Público/Git/Jogos/FlipCity/v2/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/camilinha/.nuget/NuGet/NuGet.Config"
